@@ -1,5 +1,4 @@
 {% extends 'blog/base.html' %}
-
 {% block content %}
     <div class="post">
         {% if post.published_date %}
@@ -14,3 +13,5 @@
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endblock %}
+
+
