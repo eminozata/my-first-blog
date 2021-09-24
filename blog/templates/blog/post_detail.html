@@ -1,17 +1,26 @@
-{% extends 'blog/base.html' %}
-{% block content %}
-    <div class="post">
-        {% if post.published_date %}
-            <div class="date">
-                {{ post.published_date }}
-            </div>
-        {% endif %}
-            {% if user.is_authenticated %}
-                <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
-            {% endif %}
-        <h1>{{ post.title }}</h1>
-        <p>{{ post.text|linebreaksbr }}</p>
+{% extends 'blog/base.html' %} {% block content %}
+
+<div class="ui internally celled grid">
+  <div class="ui centered card">
+    {%if post.img%}
+    <div class="image">
+      <img src="{{post.img.url}}" />
     </div>
+    {% endif %}
+
+    <div class="content">
+      <a class="header">{{post.author}}</a>
+      <div class="meta">
+        <span class="date">{{post.published_date}}</span>
+      </div>
+      <div class="description">{{post.text}}</div>
+    </div>
+    <div class="extra content">
+      <a>
+        <i class="user icon"></i>
+        22 Friends
+      </a>
+    </div>
+  </div>
+</div>
 {% endblock %}
-
-
