@@ -51,6 +51,7 @@
     <link rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
     <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" />
     <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
   </head>
 
   <body>
@@ -100,9 +101,10 @@
 
           <blockquote class="generic-blockquote">
             <p class="fz-16">
-              I am a 3rd grade physics engineering student at Istanbul Technical University. 
-              I am interested in topics such as machine learning, data science.
-              I am considering an academic career in astrophysics in the future.
+              I am a 3rd grade physics engineering student at Istanbul Technical
+              University. I am interested in topics such as machine learning,
+              data science. I am considering an academic career in astrophysics
+              in the future.
             </p>
           </blockquote>
           <a href="about.html" class="primary-btn text-uppercase">About me</a>
@@ -152,7 +154,6 @@
               </p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -214,7 +215,7 @@
             </div>
 
             <div class="single-skill">
-              <p>Numpy-Pandas -  4</p>
+              <p>Numpy-Pandas - 4</p>
               <div class="skill" data-width="80"></div>
             </div>
           </div>
@@ -257,11 +258,7 @@
           <div class="single-recent-blog col-lg-4 col-md-4">
             <div class="thumb">
               <a href="{{post.url}}" target="_blank">
-                <img
-                  class="f-img img-fluid"
-                  src="{{post.img.url}}"
-                  alt=""
-                />
+                <img class="f-img img-fluid" src="{{post.img.url}}" alt="" />
               </a>
             </div>
             <div
@@ -337,8 +334,9 @@
             <div class="single-footer-widget">
               <h4>About This Page</h4>
               <p class="footer-text">
-                This website was coded in HTML, CSS, and Javascript and for backend Django based on a
-                theme from Colorlib.  It is hosted on a PythonAnyWhere. The code can be found
+                This website was coded in HTML, CSS, and Javascript and for
+                backend Django based on a theme from Colorlib. It is hosted on a
+                PythonAnyWhere. The code can be found
                 <a
                   href="https://github.com/eminozata/my-first-blog"
                   target="_blank"
@@ -361,30 +359,16 @@
           </div>
           <div class="col-lg-5 col-md-6 col-sm-6">
             <div class="single-footer-widget">
-              <h4>Newsletter</h4>
-              <p>Stay updated with my latest projects</p>
+              <h4>Contact</h4>
+              <p>Feel free to contact with me!</p>
               <div class="" id="mc_embed_signup">
-                <form
-                  target="_blank"
-                  action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-                  method="get"
-                >
                   <div class="input-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      name="EMAIL"
-                      placeholder="Enter Email Address"
-                      onfocus="this.placeholder = ''"
-                      onblur="this.placeholder = 'Enter Email Address '"
-                      required=""
-                      type="email"
-                    />
-                    <div class="input-group-btn">
-                      <button class="btn btn-default" type="submit">
-                        <span class="lnr lnr-arrow-right"></span>
-                      </button>
-                    </div>
+<form action="" method="post">
+   {% csrf_token %}
+   {{ form }}
+   <input type="submit" class="btn" value="Submit">
+</form>
+
                     <div class="info"></div>
                   </div>
                 </form>
