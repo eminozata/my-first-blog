@@ -1,19 +1,57 @@
 {% load static %}
-<html>
-    <head>
-        <title>Emin Özata Blog</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com"> 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+  <head>
+    <!-- Mobile Specific Meta -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="{% static 'img/eminozata.png' %}" />
+    <!-- Author Meta -->
+    <meta name="author" content="Harrison Jansma" />
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="A personal website built and deployed by Harrison Jansma."
+    />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="portfolio" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>Emin Özata</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700"
+      rel="stylesheet"
+    />
+
+    <!--Semantic UI-->
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+
+    
+    <!--
+			CSS
+            "{% static 'css/main.css' %}"
+			============================================= -->
 
 
-        <link rel="stylesheet" type='text/css' href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-
-    </head>
+    <link rel="stylesheet" href="{% static 'css/linearicons.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/jquery-ui.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/animate.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  </head>
     <body>
 <div class="ui attached stackable menu">
       {% include "blog/navbar.html" %}
@@ -25,7 +63,7 @@
                 {% endblock %}
 
 
-
+{% include "blog/footer.html" %}
 
     </body>
 </html>
