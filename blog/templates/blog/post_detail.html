@@ -1,9 +1,8 @@
 {% extends 'blog/base.html' %} {% block content %}
 
-<div class="ui internally celled grid">
-  <div class="ui centered card">
+
     {%if post.img%}
-    <div class="image">
+    <div class="col-lg-6 col-md-6 col-xs-6 banner-right align-self-center">
       <img src="{{post.img.url}}" />
     </div>
     {% endif %}
@@ -21,6 +20,5 @@
         22 Friends
       </a>
     </div>
-  </div>
-</div>
+
 {% endblock %}
