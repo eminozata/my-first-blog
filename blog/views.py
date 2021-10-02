@@ -1,23 +1,12 @@
 from django.shortcuts import render
-from .models import Post, ArchivePost
+from .models import Post
 from .forms import PostForm
 from django.utils import timezone
 from django.shortcuts import redirect, get_object_or_404
 
 # Create your views here.
 
-def index(request):
-    posts = ArchivePost.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')[:3]
-    context = {'posts':posts}
-    return render(request, 'blog/index.html', context)
 
-def archive(request):
-    
-    posts = ArchivePost.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
-    return render(request, 'blog/archive.html', {'posts': posts})
-
-def about(request):
-    return render(request, 'blog/about.html', {})
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
